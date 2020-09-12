@@ -9,13 +9,6 @@ import Logout from './Components/Auth/Logout'
 import Register from './Components/Auth/Register'
 import NewPost from './Components/Posts/NewPost';
 import PostDetails from './Components/Posts/PostDetails';
-// FIREBASE
-import Firebase from 'firebase';
-import { FIREBASE_CONFIG as firebaseConfig, } from './config/FirebaseConfig';
-// // Initialize Firebase
-Firebase.initializeApp(firebaseConfig)
-Firebase.analytics();
-
 
 
 class App extends Component {
