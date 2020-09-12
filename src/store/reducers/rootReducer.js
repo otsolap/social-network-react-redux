@@ -4,10 +4,9 @@ import { combineReducers } from 'redux';
 
 
 const rootReducer = combineReducers({
-    // auth, posts, firestore ja firebase on rootReducerin PROPERTYJÄ
+    // auth, posts, on rootReducerin PROPERTYJÄ
     // jotka rootReducer PÄIVITTÄÄ.
     // ja päivitys on....... Reducerin STATET.
-    auth: authReducer,
     posts: postsReducer,
 });
 

@@ -2,31 +2,26 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-// REACT-REDUX BABY
+// REACT-REDUX
 import {
     createStore,
     applyMiddleware,
     compose
 } from 'redux'
 import { Provider } from 'react-redux';
-// import { ReactReduxFirebaseProvider } from 'react-redux-firebase';
-// import { createFirestoreInstance } from 'redux-firestore';
 import rootReducer from './store/reducers/rootReducer';
 import thunk from 'redux-thunk'
-import { useSelector } from 'react-redux'
+
 
 const store = createStore(
     rootReducer,
     compose(
-        // withextraargument tallentaa objekteja, joita getfirestore ja getfirebase on
-        // eli nyt thunkkeihin voi littää firebasen ja firestoren.
+        // withextraargument tallentaa objekteja, 
         // applymiddleware on FUNKTIO, koska sen sisällä on thunk.
-        applyMiddleware(thunk.withExtraArgument({})),
+        applyMiddleware(thunk),
         window.devToolsExtension ? window.devToolsExtension() : f => f
     )
 );
-
-
 
 
 ReactDOM.render(

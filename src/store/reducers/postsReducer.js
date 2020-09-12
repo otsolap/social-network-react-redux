@@ -1,7 +1,11 @@
 import { NEW_POST_SUCCESFUL } from '../actions/postActions';
 // tää on vaan muuntuja, johon objekteja tallenetaan.
 const initialState = {
-    posts: [],
+    posts: [
+        { id: '1', title: "Otso's first post", message: "Hello world." },
+        { id: '2', title: "Olavi's declaration.", message: "King of the World!." },
+        { id: '3', title: "Visit Lapland", message: "Home of the Santaclaus!." }
+    ],
 }
 
 
