@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 // KOMPONENTIT
 import NavBar from './Components/Layout/NavBar';
 import Main from './Components/HomePage/Main';
-import NewPost from './Components/Posts/NewPost';
 import PostDetails from './Components/Posts/PostDetails';
 
 
@@ -16,7 +15,6 @@ class App extends Component {
           <NavBar />
           <Switch>
             <Route exact path="/" component={Main} />
-            <Route path="/newpost" component={NewPost} />
             <Route path="/post/:id" component={PostDetails} />
           </Switch>
         </div>

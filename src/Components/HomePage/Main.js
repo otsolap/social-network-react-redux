@@ -1,13 +1,10 @@
 import React, { Component } from 'react'
 import AllPosts from '../Posts/AllPosts'
-import Notifications from './Notifications';
 import { connect } from 'react-redux';
 
 class Main extends Component {
     render() {
         const { posts } = this.props;
-
-
         // container = kaikki keskitetään, ei tarvii 0 auto marginia lol.
         return (
             <div className="container">
@@ -15,9 +12,6 @@ class Main extends Component {
                     <div className="col s12 m6">
                         <AllPosts posts={posts} />
                     </div>
-                    <div className="col s12 m5 offset-m1">
-                        <Notifications notifications={notifications} />
-                    </div >
                 </div>
             </div>
         )
@@ -26,7 +20,7 @@ class Main extends Component {
 
 const mapStateToProps = (state) => {
     return {
-
+        posts: state.posts
     }
 }
 

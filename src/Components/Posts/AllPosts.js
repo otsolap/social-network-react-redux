@@ -5,10 +5,11 @@ import { connect } from 'react-redux';
 
 class AllPosts extends Component {
     render() {
-        const { posts } = this.props;
+        // enne tää oli state, mutta nyt props.
+        // koska react-redux storen statet on propseja.
         return (
             <div className="all-posts section">
-                {posts && posts.map(post => {
+                {this.props.posts.map(post => {
                     return (
                         <PostSummary post={post} key={post.id} />
                     )
